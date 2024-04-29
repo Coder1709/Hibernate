@@ -31,8 +31,8 @@ public class PrintListOfAllCustomerWithSameDesignationAndCompany {
         // A Criteria object is created for Customer class
         // Restrictions are added for the 'designation' and 'company' fields
         List<Customer> customers = session.createCriteria(Customer.class)
-                .add(Restrictions.eq("designation", "YourDesignation"))
-                .add(Restrictions.eq("company", "YourCompany"))
+                .add(Restrictions.eq("designation", "SDE"))
+                .add(Restrictions.eq("companyName", "Nucleus"))
                 .list();
 
         // The forEach method is used to print each Customer object

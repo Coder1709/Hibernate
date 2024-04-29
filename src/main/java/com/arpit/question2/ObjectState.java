@@ -1,6 +1,5 @@
 package com.arpit.question2;
 
-package com.arpit.question1;
 
 import com.arpit.model.Customer;
 import org.hibernate.Session;

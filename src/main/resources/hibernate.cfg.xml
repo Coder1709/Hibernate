@@ -1,0 +1,33 @@
+<!-- This is the Hibernate configuration file. It is used to set up the connection to the database and other Hibernate settings. -->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- The driver class for the database. In this case, it's for Oracle. -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <!-- The URL of the database. -->
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+        <!-- The username for the database. -->
+        <property name="hibernate.connection.username">sys as sysdba</property>
+        <!-- The password for the database. -->
+        <property name="hibernate.connection.password">password</property>
+        <!-- The dialect specifies the type of database used so that Hibernate knows how to generate the SQL queries. -->
+        <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+        <!-- This property is used to automatically create, update, or validate the database schema. -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- If this property is set to true, Hibernate will print out the SQL queries it executes. -->
+        <property name="hibernate.show_sql">true</property>
+        <!-- If this property is set to true, Hibernate will format the SQL queries it prints out. -->
+        <property name="hibernate.format_sql">true</property>
+        <!-- Mapping of the Customer class. -->
+        <mapping class = "com.arpit.model.Customer"/>
+        <mapping class = "com.arpit.model.LoanProduct"/>
+        <mapping class = "com.arpit.model.LoanAgreement"/>
+        <mapping class = "com.arpit.model.LoanStatus"/>
+        <!-- Mapping of the Loan class. -->
+
+    </session-factory>
+</hibernate-configuration>
